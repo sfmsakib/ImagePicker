@@ -1,4 +1,4 @@
-package com.sprout.ImagePicker;
+package com.sprout.imagepicker;
 
 import org.junit.Test;
 

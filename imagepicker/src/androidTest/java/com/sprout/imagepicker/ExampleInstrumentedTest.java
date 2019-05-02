@@ -1,4 +1,4 @@
-package com.sprout.ImagePicker;
+package com.sprout.imagepicker;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.sprout.ImagePicker", appContext.getPackageName());
+        assertEquals("com.sprout.imagepicker.test", appContext.getPackageName());
     }
 }
