@@ -14,5 +14,6 @@ allprojects {
 Add the dependency:
 
 dependencies {
-	implementation 'com.github.sfmsakib:ImagePicker:1.0.0'
+        implementation 'com.github.sfmsakib:ImagePicker:1.0.1'
+
 }
