@@ -19,6 +19,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.sprout.imagepicker.PickImage;
+import com.sprout.imagepicker.logs.L;
+
+import java.io.File;
 
 public class ImageUpload extends AppCompatActivity {
     ImageView imageView;
@@ -192,6 +195,16 @@ public class ImageUpload extends AppCompatActivity {
             pickImage.create(getApplicationContext());
             pickImage.compressImage(uri);
             pickImage.into(imageView);
+
+            File mFile = null;
+            mFile = pickImage.getCompressedFile();
+
+            L.i("Sample: compressed file: "+mFile);
+
+            Uri file = Uri.fromFile(mFile);
+
+            L.i("Sample: uri from compressed file: "+file);
+
 
 
 

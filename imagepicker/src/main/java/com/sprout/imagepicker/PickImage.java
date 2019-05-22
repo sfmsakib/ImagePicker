@@ -22,20 +22,30 @@ public class PickImage {
     public void compressImage(Uri uri) {
 
         try {
-            L.i("Inside start upload");
+            L.i("PickImage:Inside start upload");
             if(uri==null){
-                L.i("URI NULL");
+                L.i("PickImage:URI NULL");
                 return;
             }
+            L.i("PickImage:URI: "+uri);
+
             compressedImage = new File(CustomizeImage.compressImage(uri, mContext));
-            L.i("Found Image: " +(compressedImage!=null));
+            L.i("PickImage:Found Image: " +(compressedImage!=null));
 
 
         } catch (Exception e) {
-            L.i("URI Exception: "+e.getMessage());
+            L.i("PickImage:URI Exception: "+e.getMessage());
         }
     }
     public void into(ImageView imageView){
         imageView.setImageURI(Uri.fromFile(compressedImage));
     }
+
+    public File getCompressedFile(){
+        L.i("PickImage: compressed file:"+compressedImage);
+        return compressedImage;
+    }
+
+
+
 }
